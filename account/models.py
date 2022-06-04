@@ -1,7 +1,6 @@
 from urllib import request
 from django.db import models
 from email.policy import default
-from tkinter import CASCADE
 
 # Create your models here.
 
