@@ -126,7 +126,7 @@ STATICFILES_DIRS = [BASE_DIR/'static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
