@@ -36,5 +36,3 @@ class patientdb(models.Model):
             return self.img.url
         else:
             return '\static\img\default.png'
-
-
