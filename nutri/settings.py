@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'nutrica.apps.NutricaConfig',
     'account.apps.AccountConfig',
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,12 +76,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'nutri.wsgi.application'
-ASGI_APPLICATION = 'nutri.asgi.application'
+# ASGI_APPLICATION = 'nutri.asgi.application'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Database
@@ -129,14 +129,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
-# STATICFILES_DIRS = [BASE_DIR/'static']
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static_cdn')
-]
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR/'static']
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static_cdn')
+# ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
